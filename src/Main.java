@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner consola = new Scanner(System.in);
+
+        System.out.print("Escribe tu nombre: ");
+        String nombre = consola.nextLine();
         while (true) {
             System.out.println("----- Aplicacion Calculadora -----");
             System.out.println("1. Suma");
@@ -24,20 +27,20 @@ public class Main {
                     switch (opcion) {
                         case 1:
                             resultado = numero1 + numero2;
-                            System.out.println("El resultado de la suma es : " + resultado);
+                            System.out.println(nombre + "El resultado de la suma es : " + resultado);
                             break;
                         case 2:
                             resultado = numero1 - numero2;
-                            System.out.println("El resultado de la resta es : " + resultado);
+                            System.out.println(nombre + "El resultado de la resta es : " + resultado);
                             break;
                         case 3:
                             resultado = numero1 * numero2;
-                            System.out.println("El resultado de la multiplicacion es : " + resultado);
+                            System.out.println(nombre +"El resultado de la multiplicacion es : " + resultado);
                             break;
                         case 4:
                             if (numero2 != 0) {
                                 resultado = numero1 / numero2;
-                                System.out.println("El resultado de la division es : " + resultado);
+                                System.out.println(nombre + "El resultado de la division es : " + resultado);
                             } else {
                                 System.out.println("No se puede dividir por cero.");
                             }
@@ -47,10 +50,10 @@ public class Main {
                             break;
                     }
                 } else if (opcion == 5) {
-                    System.out.println("Saliendo de la aplicación...");
+                    System.out.println("Gracias " + nombre + " Estas saliendo de la aplicación...");
                     break;
                 } else {
-                    System.out.println("Opción no válida.");
+                    System.out.println(nombre + "Opción no válida.");
                 }
                 System.out.println();
             } catch (Exception e) {
