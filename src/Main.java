@@ -5,10 +5,13 @@ public class Main {
 
         Scanner consola = new Scanner(System.in);
 
-        System.out.print("Escribe tu nombre: ");
-        String nombre = consola.nextLine();
+        System.out.print("Escribe calculadora para acceder: ");
+        String clave = consola.nextLine();
 
-        if (nombre.equals("santiago")){
+        if (clave.equals("calculadora")){
+
+            System.out.print("Escribe tu nombre: ");
+            String nombre = consola.nextLine();
 
         while (true) {
             System.out.println("----- Aplicacion Calculadora -----");
